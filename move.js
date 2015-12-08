@@ -24,6 +24,19 @@ $(document).ready(function(){
     var myCode=editor.getValue();
     console.log(myCode);
     eval(myCode);
+    setTimeout(function(){
+      if($('#char').position().top === $('#x').position().top && $('#char').position().left === $('#x').position().left){
+      alert("Congrats you won!");
+    }
+    else{
+      alert("Sorry, try again");
+      console.log($('#char').position());
+      console.log($('#x').position());
+      $("#char").css('top', '0px');
+      $("#char").css('left', '0px');
+
+    }}, 3000);
+
   });
 
 });
