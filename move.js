@@ -40,6 +40,8 @@ $(document).ready(function(){
     setTimeout(function(){
       if($('#char').position().top === $('#x').position().top && $('#char').position().left === $('#x').position().left){
       alert("Congrats you won!");
+      $("#char").css('top', '0px');
+      $("#char").css('left', '0px');
       posUp = 0;
       posLeft = 0;
     }
